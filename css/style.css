@@ -13,7 +13,7 @@
 body {
   background: #bdc3c7;
   color: white;
-  font-family: "Raleway", sans-serif;
+  font-family: "Questrial", sans-serif;
   min-height: 100vh;
 }
 
@@ -32,7 +32,7 @@ form {
 
 input[type="text"] {
   font-size: 20px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 input:focus,
@@ -95,7 +95,7 @@ form button:hover {
   flex: auto;
 }
 
-.trash-btn,
+.delete-btn,
 .complete-btn {
   color: white;
   border: none;
@@ -114,11 +114,11 @@ form button:hover {
   transform: scale(1.21);
 }
 
-.trash-btn {
+.delete-btn {
   background: rgba(238, 82, 83, 1);
 }
 
-.trash-btn:hover {
+.delete-btn:hover {
   transform: scale(1.21);
 }
 
@@ -146,23 +146,54 @@ select {
   -moz-appearance: none;
   appearance: none;
   outline: none;
-  border: none;
+  border: 0 !important;
+  background-image: none;
 }
 
 .select {
   margin: 1rem;
-  display: block;
-  font-size: 18px;
+  display: flex;
   position: relative;
   overflow: hidden;
+  width: 10em;
+  height: 2.8em;
+  line-height: 3;
+  background: #2d3436;
+  border-radius: 0;
 }
 
 select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #2d3436;
+  cursor: pointer;
+  border-radius: 0;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+}
+
+.select::after {
+  content: '\2BC6';
+  position: absolute;
+  color: #bdc3c7;
+  top: 0;
+  right: 0;
+  padding-right: .6rem;
+  padding-left: .6rem;
+  pointer-events: none;
+  transition: .25s ease all;
+}
+
+.select:hover::after {
+  background: white;
+  color: #2d3436;
+}
+
+/* select {
   color: #2d3436;
   border-radius: 0;
   width: 10rem;
   cursor: pointer;
-  padding: 1.05rem;
 }
 
 .select::after {
@@ -178,4 +209,4 @@ select {
 .select:hover::after {
   background: white;
   color: #2d3436;
-}
+} */

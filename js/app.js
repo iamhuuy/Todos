@@ -33,10 +33,10 @@ function addTodo(event) {
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
     // check trash button
-    const trashButton = document.createElement("button");
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+    deleteButton.classList.add("delete-btn");
+    todoDiv.appendChild(deleteButton);
     // append to list
     todoList.appendChild(todoDiv);
     // clear todo input value
@@ -47,7 +47,7 @@ function addTodo(event) {
 function deleteCheck(e) {
   const item = e.target;
   // delete todo
-  if (item.classList[0] === "trash-btn") {
+  if (item.classList[0] === "delete-btn") {
     const todo = item.parentElement;
     // animation
     todo.classList.add("remove-todo");
@@ -125,10 +125,10 @@ function getTodos() {
     completedButton.classList.add("complete-btn");
     todoDiv.appendChild(completedButton);
     // check trash button
-    const trashButton = document.createElement("button");
-    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
+    const deleteButton = document.createElement("button");
+    deleteButton.innerHTML = '<i class="fas fa-times"></i>';
+    deleteButton.classList.add("delete-btn");
+    todoDiv.appendChild(deleteButton);
     // append to list
     todoList.appendChild(todoDiv);
   });
