@@ -11,7 +11,7 @@
 }
 
 body {
-  background: #bdc3c7;
+  background-image: linear-gradient(0deg, #bdc3c7, #7f8c8d) ;
   color: white;
   font-family: "Questrial", sans-serif;
   min-height: 100vh;
